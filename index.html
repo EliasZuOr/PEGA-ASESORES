@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEGA ASESORES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        pega: {                    // Colores:
+                            verde: '#365939',      // Verde corporativo
+                            'verde-dark': '#233D26', // Verde más oscuro para contrastes
+                            dorado: '#BF8845',     // Acento premium
+                            'dorado-light': '#D9A66C', 
+                            durazno: '#F2C299',    // Acento suave
+                            fondo: '#F5F7FA',      // Fondo gris claro
+                            texto: '#2D3748',      // Texto principal
+                        }
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -15px rgba(54, 89, 57, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scrolled-nav { background-color: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="bg-pega-fondo text-pega-texto font-sans antialiased overflow-x-hidden">
+
+    <nav id="main-nav" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md py-4 border-b border-gray-100">
+        <div class="container mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="h-10 w-1 bg-pega-dorado group-hover:h-12 transition-all"></div>
+                <span class="text-2xl font-extrabold text-pega-verde tracking-tight">PEGA <span class="text-pega-dorado">ASESORES</span></span>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-10 font-semibold text-sm text-pega-verde/80 uppercase tracking-wider">
+                <li><a href="#beneficios" class="hover:text-pega-dorado transition">Por qué Nosotros</a></li>
+                <li><a href="#servicios" class="hover:text-pega-dorado transition">Servicios</a></li>
+                <li><a href="#proceso" class="hover:text-pega-dorado transition">Cómo Funciona</a></li>
+            </ul>
+
+            <div class="hidden md:block">
+                <a href="#contacto" class="bg-pega-verde text-white px-6 py-3 rounded-full font-bold hover:bg-pega-dorado transition-all duration-300 shadow-lg hover:shadow-pega-dorado/30 transform hover:-translate-y-1">
+                    Agenda tu Diagnóstico Gratis
+                </a>
+            </div>
+
+            <button class="md:hidden text-pega-verde text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-pega-verde-dark">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+             <div class="absolute -top-1/2 -right-1/2 w-[100rem] h-[100rem] bg-gradient-to-bl from-pega-dorado via-transparent to-transparent rounded-full blur-3xl animate-pulse slow"></div>
+             <div class="absolute bottom-0 left-0 w-[60rem] h-[60rem] bg-gradient-to-tr from-pega-durazno via-transparent to-transparent rounded-full blur-3xl opacity-60"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <div class="inline-block px-4 py-2 bg-white/10 rounded-full text-pega-durazno text-sm font-bold mb-6 uppercase tracking-wider border border-white/20">
+                        Contabilidad y Estrategia Fiscal
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Tu negocio crece, <br> nosotros nos ocupamos del <span class="text-transparent bg-clip-text bg-gradient-to-r from-pega-dorado to-pega-durazno">SAT y los números.</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed md:pr-12 font-medium">
+                        Deja de sufrir con la contabilidad. En PEGA ASESORES combinamos experiencia fiscal con agilidad digital para darte seguridad, transparencia y más tiempo para vender.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#contacto" class="bg-pega-dorado text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-pega-verde transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3">
+                            Empezar Ahora <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#servicios" class="px-8 py-4 rounded-full font-bold text-lg text-white border-2 border-white/30 hover:bg-white/10 transition-all flex items-center justify-center">
+                            Ver Servicios
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-6">
+                        <i class="fas fa-check-circle text-pega-verde mr-2"></i> Primera asesoría de diagnóstico sin costo.
+                    </p>
+                </div>
+                <div class="md:w-1/2 relative hidden md:block">
+                    <div class="relative z-10 bg-white/5 backdrop-blur-sm p-6 rounded-2xl border border-white/10 shadow-2xl transform rotate-2 hover:rotate-0 transition-all duration-500">
+                         <div class="bg-white rounded-xl p-6 shadow-inner overflow-hidden relative">
+                            <div class="flex justify-between mb-8 opacity-50">
+                                <div class="h-4 w-1/3 bg-gray-200 rounded"></div>
+                                <div class="h-4 w-10 bg-pega-dorado rounded-full"></div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex gap-4 items-center"><div class="w-10 h-10 rounded-full bg-pega-verde/20 flex items-center justify-center"><i class="fas fa-chart-line text-pega-verde"></i></div> <div class="h-4 w-3/4 bg-gray-200 rounded"></div></div>
+                                <div class="flex gap-4 items-center"><div class="w-10 h-10 rounded-full bg-pega-dorado/20 flex items-center justify-center"><i class="fas fa-file-invoice-dollar text-pega-dorado"></i></div> <div class="h-4 w-2/3 bg-gray-200 rounded"></div></div>
+                                <div class="flex gap-4 items-center"><div class="w-10 h-10 rounded-full bg-pega-durazno/20 flex items-center justify-center"><i class="fas fa-shield-alt text-pega-dorado-light"></i></div> <div class="h-4 w-4/5 bg-gray-200 rounded"></div></div>
+                            </div>
+                            <div class="mt-8 h-32 bg-gradient-to-t from-pega-verde/10 to-transparent rounded-lg border-b-4 border-pega-verde relative">
+                                <span class="absolute bottom-2 right-4 font-bold text-pega-verde">Cumplimiento Total</span>
+                            </div>
+                         </div>
+                    </div>
+                    <div class="absolute top-10 -right-10 w-full h-full bg-pega-dorado/10 rounded-2xl -z-10 transform -rotate-3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white py-8 border-b border-gray-100">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-8 text-gray-500 font-medium uppercase tracking-widest text-sm">
+            <span><i class="fas fa-shield-alt text-pega-dorado mr-2"></i> Seguridad Fiscal Garantizada</span>
+            <span><i class="fas fa-user-tie text-pega-verde mr-2"></i> Contadores Certificados</span>
+            <span><i class="fas fa-bolt text-pega-durazno mr-2"></i> Respuestas Rápidas</span>
+            <span class="hidden md:block"><i class="fas fa-handshake mr-2"></i> Atención Personalizada</span>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+             <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-pega-verde mb-6">Más que contadores, tus <span class="text-pega-dorado relative after:content-[''] after:absolute after:w-full after:h-2 after:bg-pega-durazno/40 after:bottom-1 after:left-0 after:-z-10">aliados estratégicos</span>.</h2>
+                <p class="text-lg text-gray-600">Entendemos que cada negocio es único. No te damos soluciones de molde, te damos tranquilidad financiera adaptada a ti.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-pega-fondo p-10 rounded-3xl hover:shadow-premium transition-all duration-300 group border border-transparent hover:border-pega-durazno/50">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-brain text-3xl text-pega-dorado"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4">Estrategia vs. Captura</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">No solo registramos facturas. Analizamos tus números para encontrar oportunidades legales de ahorro y optimización fiscal.</p>
+                    <a href="#contacto" class="text-pega-dorado font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Hablemos <i class="fas fa-arrow-right text-sm"></i></a>
+                </div>
+                 <div class="bg-pega-fondo p-10 rounded-3xl hover:shadow-premium transition-all duration-300 group border border-transparent hover:border-pega-durazno/50">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-clock text-3xl text-pega-verde"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4">Cero Multas y Recargos</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Nuestros sistemas y procesos garantizan que tus declaraciones se presenten en tiempo y forma, siempre. Duerme tranquilo.</p>
+                    <a href="#contacto" class="text-pega-dorado font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Hablemos <i class="fas fa-arrow-right text-sm"></i></a>
+                </div>
+                 <div class="bg-pega-fondo p-10 rounded-3xl hover:shadow-premium transition-all duration-300 group border border-transparent hover:border-pega-durazno/50">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-comments-dollar text-3xl text-pega-durazno"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4">Comunicación Humana</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">Sin tecnicismos confusos. Te explicamos tu situación financiera en español claro y estamos disponibles cuando nos necesitas.</p>
+                    <a href="#contacto" class="text-pega-dorado font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Hablemos <i class="fas fa-arrow-right text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-pega-verde-dark skew-y-3 transform origin-top-right -z-10 h-[120%]"></div>
+        
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 text-white">
+                <div class="md:w-2/3">
+                    <h4 class="text-pega-durazno font-bold uppercase tracking-wider mb-4">Nuestras Soluciones</h4>
+                    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">Todo lo que tu empresa necesita para <span class="text-pega-dorado">operar sin problemas.</span></h2>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-14 h-14 bg-pega-fondo rounded-xl flex items-center justify-center group-hover:bg-pega-verde transition-colors">
+                            <i class="fas fa-calculator text-2xl text-pega-verde group-hover:text-white transition-colors"></i>
+                        </div>
+                        <span class="bg-pega-fondo text-pega-verde-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Esencial</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4 group-hover:text-pega-dorado transition-colors">Contabilidad Integral</h3>
+                    <p class="text-gray-600 mb-8">Manejo completo de tu contabilidad electrónica, registros diarios y emisión de estados financieros claros.</p>
+                    <ul class="space-y-3 mb-8 text-gray-500 text-sm">
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Cumplimiento normativo</li>
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Reportes mensuales</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 text-center border-2 border-pega-verde text-pega-verde font-bold rounded-lg hover:bg-pega-verde hover:text-white transition-all">Cotizar Ahora</a>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-all duration-300 relative ring-4 ring-pega-dorado/30 transform md:-mt-4 md:mb-4 z-10">
+                    <div class="absolute top-0 right-0 bg-pega-dorado text-white text-xs font-bold px-4 py-2 rounded-bl-xl rounded-tr-xl uppercase">Más Popular</div>
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-14 h-14 bg-pega-fondo rounded-xl flex items-center justify-center group-hover:bg-pega-dorado transition-colors">
+                            <i class="fas fa-balance-scale text-2xl text-pega-dorado group-hover:text-white transition-colors"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4 hover:text-pega-dorado transition-colors">Asesoría y Estrategia Fiscal</h3>
+                    <p class="text-gray-600 mb-8">Planeación estratégica para optimizar tu carga tributaria dentro del marco legal. Paga lo justo, no más.</p>
+                    <ul class="space-y-3 mb-8 text-gray-500 text-sm">
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Diagnóstico fiscal inicial</li>
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Prevención de riesgos SAT</li>
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Estrategias de ahorro</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 text-center bg-pega-dorado text-white font-bold rounded-lg hover:bg-pega-verde transition-all shadow-md">Cotizar Ahora</a>
+                </div>
+
+                 <div class="bg-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="w-14 h-14 bg-pega-fondo rounded-xl flex items-center justify-center group-hover:bg-pega-durazno transition-colors">
+                            <i class="fas fa-users-cog text-2xl text-pega-durazno group-hover:text-white transition-colors"></i>
+                        </div>
+                        <span class="bg-pega-fondo text-pega-verde-dark text-xs font-bold px-3 py-1 rounded-full uppercase">Empresas</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pega-verde mb-4 group-hover:text-pega-dorado transition-colors">Nómina y Capital Humano</h3>
+                    <p class="text-gray-600 mb-8">Cálculo preciso de nóminas, IMSS, INFONAVIT y gestión de prestaciones para tu equipo.</p>
+                    <ul class="space-y-3 mb-8 text-gray-500 text-sm">
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Timbrado de recibos</li>
+                        <li><i class="fas fa-check text-pega-dorado mr-2"></i> Altas y bajas patronales</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 text-center border-2 border-pega-verde text-pega-verde font-bold rounded-lg hover:bg-pega-verde hover:text-white transition-all">Cotizar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proceso" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-pega-verde mb-6">Tu contabilidad, simplificada en <span class="text-pega-dorado">3 pasos.</span></h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Eliminamos la complejidad para que puedas enfocarte en lo importante.</p>
+        </div>
+
+        <div class="container mx-auto px-6 md:px-12 relative">
+            <div class="hidden md:block absolute top-1/2 left-12 right-12 h-1 bg-gray-100 -translate-y-1/2 z-0"></div>
+
+            <div class="grid md:grid-cols-3 gap-12 relative z-10">
+                <div class="bg-white p-8 rounded-3xl shadow-premium text-center group hover:-translate-y-2 transition-all">
+                    <div class="w-20 h-20 mx-auto bg-pega-verde text-white rounded-full flex items-center justify-center text-3xl font-bold mb-8 border-8 border-white ring-4 ring-pega-fondo group-hover:ring-pega-dorado transition-all">1</div>
+                    <h3 class="text-xl font-bold text-pega-verde mb-4">Diagnóstico Inicial</h3>
+                    <p class="text-gray-600">Agendamos una videollamada para entender tu negocio y evaluar tu situación fiscal actual sin costo.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-premium text-center group hover:-translate-y-2 transition-all">
+                    <div class="w-20 h-20 mx-auto bg-pega-dorado text-white rounded-full flex items-center justify-center text-3xl font-bold mb-8 border-8 border-white ring-4 ring-pega-fondo group-hover:ring-pega-verde transition-all">2</div>
+                    <h3 class="text-xl font-bold text-pega-verde mb-4">Propuesta a Medida</h3>
+                    <p class="text-gray-600">Diseñamos un plan de trabajo y una estrategia fiscal personalizada para tus objetivos.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-premium text-center group hover:-translate-y-2 transition-all">
+                    <div class="w-20 h-20 mx-auto bg-pega-durazno text-pega-verde-dark rounded-full flex items-center justify-center text-3xl font-bold mb-8 border-8 border-white ring-4 ring-pega-fondo group-hover:ring-pega-verde transition-all">3</div>
+                    <h3 class="text-xl font-bold text-pega-verde mb-4">Operación y Tranquilidad</h3>
+                    <p class="text-gray-600">Nos hacemos cargo de tus obligaciones mes a mes. Tú recibes reportes claros y tranquilidad total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-24 bg-pega-fondo">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="text-3xl font-extrabold text-pega-verde mb-6">Preguntas <span class="text-pega-dorado">Frecuentes</span></h2>
+                    <p class="text-gray-600 mb-8 text-lg">Resolvemos las dudas más comunes antes de empezar a trabajar juntos.</p>
+                    <a href="#contacto" class="inline-flex items-center gap-2 font-bold text-pega-verde hover:text-pega-dorado transition-colors">
+                        ¿Tienes otra duda? Contáctanos <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="md:w-2/3 space-y-6">
+                    <details class="bg-white p-6 rounded-2xl shadow-sm group open:ring-2 open:ring-pega-dorado/50 transition-all">
+                        <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-pega-verde text-lg">
+                            ¿Trabajan con personas físicas y morales?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-pega-dorado"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 leading-relaxed">Sí, absolutamente. Tenemos planes específicos tanto para freelancers y profesionistas independientes (Personas Físicas) como para empresas constituidas (Personas Morales) de diversos tamaños.</p>
+                    </details>
+                    <details class="bg-white p-6 rounded-2xl shadow-sm group open:ring-2 open:ring-pega-dorado/50 transition-all">
+                        <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-pega-verde text-lg">
+                            ¿Qué pasa si estoy atrasado con el SAT?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-pega-dorado"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 leading-relaxed">No te preocupes, es más común de lo que crees. Nuestro primer paso será realizar un diagnóstico para identificar las declaraciones pendientes y diseñar un plan de regularización para ponerte al día lo antes posible.</p>
+                    </details>
+                    <details class="bg-white p-6 rounded-2xl shadow-sm group open:ring-2 open:ring-pega-dorado/50 transition-all">
+                        <summary class="flex justify-between items-center cursor-pointer list-none font-bold text-pega-verde text-lg">
+                            ¿La asesoría inicial tiene costo?
+                            <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down text-pega-dorado"></i></span>
+                        </summary>
+                        <p class="text-gray-600 mt-4 leading-relaxed">No. La primera sesión de diagnóstico es completamente gratuita. Nos sirve para conocerte y determinar si somos el aliado adecuado para tu negocio.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-24 bg-pega-verde-dark relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 text-[20rem] text-white opacity-5 pointer-events-none">
+            <i class="fas fa-comments"></i>
+        </div>
+
+        <div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-8 leading-tight">¿Listo para tomar el control <br> de tus números?</h2>
+            <p class="text-xl text-pega-durazno mb-12 max-w-2xl mx-auto font-medium">Agenda tu diagnóstico fiscal gratuito hoy mismo. Sin compromisos.</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-16">
+                <a href="https://wa.me/5213316057173?text=Hola,%20me%20gustaría%20hablar%20con%20un%20especialista." target="_blank" class="bg-[#25D366] text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-[#25D366] transition-all duration-300 shadow-xl flex items-center justify-center gap-4 group">
+                    <i class="fab fa-whatsapp text-3xl group-hover:scale-110 transition-transform"></i> Agendar por WhatsApp
+                </a>
+                <a href="mailto:contacto@pegaasesores.com" class="bg-white/10 text-white px-10 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-pega-verde transition-all duration-300 flex items-center justify-center gap-4 backdrop-blur-sm border-2 border-white/20">
+                    <i class="far fa-envelope text-2xl"></i> Enviar Correo
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-white/80 max-w-4xl mx-auto border-t border-white/10 pt-12">
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-phone-alt text-pega-dorado text-2xl mb-4"></i>
+                    <p class="font-bold text-white">Llámanos</p>
+                    <p>+52 1 33 1605 7173</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-map-marker-alt text-pega-dorado text-2xl mb-4"></i>
+                    <p class="font-bold text-white">Visítanos</p>
+                    <p>C. Miguel Lerdo de Tejada 2603, Arcos Vallarta, 44130 Guadalajara, Jal.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <i class="fas fa-clock text-pega-dorado text-2xl mb-4"></i>
+                    <p class="font-bold text-white">Horario</p>
+                    <p>Lun - Vie: 9am - 6pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-pega-verde-dark text-gray-400 py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 md:px-12 text-center md:text-left md:flex justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <span class="text-2xl font-extrabold text-white tracking-tight">PEGA <span class="text-pega-dorado">ASESORES</span></span>
+                <p class="mt-2 text-sm">Soluciones contables y fiscales para el crecimiento de tu negocio.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex gap-6 text-xl">
+                    <a href="#" class="hover:text-pega-dorado transition-colors"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-pega-dorado transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/pegaasesores/" class="hover:text-pega-dorado transition-colors"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 md:px-12 text-center mt-12 pt-8 border-t border-white/5 text-sm">
+             <p>&copy; 2025 PEGA ASESORES. Todos los derechos reservados. | <a href="#" class="hover:text-pega-dorado underline">Aviso de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled-nav', 'shadow-md');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('scrolled-nav', 'shadow-md');
+                nav.classList.remove('py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+
+</body>
+</html>
